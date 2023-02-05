@@ -1,0 +1,55 @@
+{
+  "name": "pagerduty-calculator",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "main": "./dist/pagerduty-calculator.umd.cjs",
+  "module": "./dist/pagerduty-calculator.js",
+  "exports": {
+    ".": {
+      "import": "./dist/pagerduty-calculator.js",
+      "require": "./dist/pagerduty-calculator.cjs"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tomas2D/pagerduty-calculator.git"
+  },
+  "engines": {
+    "node": "^18.12.1",
+    "npm": "^8.19.2"
+  },
+  "bugs": {
+    "url": "https://github.com/Tomas2D/pagerduty-calculator/issues"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "lint": "eslint src/**/* && prettier --check src/**/*",
+    "lint:fix": "eslint src/**/* --fix && prettier --write src/**/*",
+    "changelog": "npx gitmoji-changelog"
+  },
+  "author": "Tomáš Dvořák <toomas2d@gmail.com>",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "@types/ramda": "^0.28.22",
+    "ramda": "^0.28.0",
+    "zod": "^3.20.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "gitmoji-changelog": "^2.3.0",
+    "prettier": "^2.8.3",
+    "typescript": "^4.9.5",
+    "vite": "^4.0.4",
+    "vite-tsconfig-paths": "^4.0.5",
+    "vitest": "^0.28.4"
+  }
+}

@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: ['main']
+    tags: ['**']
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      TZ: Europe/Prague
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run test
+      - run: npm run build
