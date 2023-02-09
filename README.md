@@ -20,7 +20,7 @@ import { getStats } from 'pagerduty-calculator'
 
 const results = await getStats({
   api: {
-    domain: 'organization.pagerduty.com',
+    domain: 'your_organization.pagerduty.com',
     teamIds: ['XXXXXX'],
     timeZone: 'Europe/Prague',
     fetchOptions: {
@@ -52,7 +52,7 @@ const results = await getStats({
 ```
 
 ### Example response
-```json
+```text
 {
   "totalDays": 31,
   "holidays": 1,
