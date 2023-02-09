@@ -29,7 +29,8 @@
     "coverage": "vitest run --coverage",
     "lint": "eslint src/**/* && prettier --check src/**/*",
     "lint:fix": "eslint src/**/* --fix && prettier --write src/**/*",
-    "changelog": "npx gitmoji-changelog"
+    "changelog": "npx gitmoji-changelog",
+    "prepublishOnly": "npm run build"
   },
   "author": "Tomáš Dvořák <toomas2d@gmail.com>",
   "license": "ISC",
