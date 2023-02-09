@@ -2,6 +2,9 @@ import { Options } from '@app/types'
 import { describe, expect, it, vi } from 'vitest'
 import { getStats } from '@app/core'
 import { sum } from 'ramda'
+import * as fetch from 'cross-fetch'
+
+vi.mock('cross-fetch')
 
 const Config: Options = {
   nicknames: {
@@ -27,7 +30,7 @@ const Config: Options = {
 
 describe('Core module', () => {
   it('shell retrieve results', async () => {
-    vi.spyOn(global, 'fetch').mockImplementationOnce(
+    vi.spyOn(fetch, 'default').mockImplementationOnce(
       async () =>
         new Response(
           JSON.stringify({
