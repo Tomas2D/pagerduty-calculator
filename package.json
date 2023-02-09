@@ -1,6 +1,6 @@
 {
   "name": "pagerduty-calculator",
-  "version": "0.0.1",
+  "version": "1.0.0-alpha.0",
   "description": "",
   "type": "module",
   "main": "./dist/pagerduty-calculator.umd.cjs",
