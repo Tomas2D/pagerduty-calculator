@@ -18,7 +18,12 @@ export const configSchema = z.object({
     .refine((obj) => obj.end > obj.start),
   api: z
     .object({
-      domain: z.string().url(),
+      domain: z.preprocess((domain) => {
+        if (typeof domain === 'string' && !domain.match(/^http[s]:\/\//i)) {
+          return `https://${domain}`
+        }
+        return domain
+      }, z.string().url()),
       timeZone: z.string().default(process.env.TZ || 'UTC'),
       teamIds: z.array(z.string()),
     })

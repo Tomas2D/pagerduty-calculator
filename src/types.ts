@@ -1,9 +1,24 @@
 export interface APIOptions {
+  /**
+   * Your PagerDuty domain
+   * @example https://company.pagerduty.com
+   */
   domain: string
+  /**
+   * Timezone, should be same as your local one.
+   * @example Europe/Prague
+   */
   timeZone: string
   teamIds: string[]
   from: Date
   to: Date
+  /**
+   * @example {
+   *   headers: {
+   *    Authorization: 'Token token=YOUR_PAGERDUTY_TOKEN',
+   *   }
+   * }
+   */
   fetchOptions?: RequestInit
 }
 
@@ -24,7 +39,7 @@ export interface Options {
     end: Date
     holidays: Date[]
   }
-  api: Omit<APIOptions, 'from' | 'to' | 'fetchOptions'>
+  api: Omit<APIOptions, 'from' | 'to'>
 }
 
 export interface GroupedResult {
