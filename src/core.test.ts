@@ -19,7 +19,7 @@ const Config: Options = {
   dates: {
     start: new Date('2023-01-01'),
     end: new Date('2023-02-01'),
-    holidays: [new Date('2022-11-17')],
+    holidays: [new Date('2023-01-01')],
   },
   api: {
     domain: 'https://test.pagerduty.com',
@@ -383,9 +383,10 @@ describe('Core module', () => {
 
     const results = await getStats(Config)
 
-    expect(results.holidays).toMatchInlineSnapshot('0')
-    expect(results.workingDays).toMatchInlineSnapshot('31')
-    expect(results.weekDays).toMatchInlineSnapshot('15')
+    expect(results.totalDays).toMatchInlineSnapshot('31')
+    expect(results.holidays).toMatchInlineSnapshot('1')
+    expect(results.workingDays).toMatchInlineSnapshot('22')
+    expect(results.weekDays).toMatchInlineSnapshot('9')
     expect(Array.from(results.people.keys())).toMatchInlineSnapshot(`
       [
         "Tomas",

@@ -62,6 +62,7 @@ export interface OutputDay {
 export interface Output {
   days: Map<string, OutputDay>
   people: Map<string, OutputPerson>
+  totalDays: number
   weekDays: number
   workingDays: number
   holidays: number

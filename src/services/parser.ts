@@ -161,11 +161,12 @@ export function createSummaryFactory(daysInMonth: number) {
 
         if (!result.days.has(date)) {
           result.days.set(date, { date, dateInstance, isHoliday, isWeekend })
+          result.weekDays += Number(isWeekend)
+          result.holidays += Number(isHoliday)
+          result.workingDays += Number(!isWeekend && !isHoliday)
+          result.totalDays++
         }
 
-        result.weekDays += Number(isWeekend)
-        result.holidays += Number(isHoliday)
-        result.workingDays += Number(!isWeekend && !isHoliday)
         return result
       },
       {
@@ -174,6 +175,7 @@ export function createSummaryFactory(daysInMonth: number) {
         weekDays: 0,
         workingDays: 0,
         holidays: 0,
+        totalDays: 0,
       },
     )
 }
