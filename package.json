@@ -3,7 +3,7 @@
   "version": "1.0.0-alpha.0",
   "description": "",
   "type": "module",
-  "main": "./dist/pagerduty-calculator.umd.cjs",
+  "main": "./dist/pagerduty-calculator.cjs",
   "module": "./dist/pagerduty-calculator.js",
   "exports": {
     ".": {
