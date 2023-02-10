@@ -1,5 +1,4 @@
 import { z } from 'zod'
-import * as process from 'process'
 
 export const configSchema = z.object({
   nicknames: z.record(z.string()).default({}),
@@ -24,7 +23,7 @@ export const configSchema = z.object({
         }
         return domain
       }, z.string().url()),
-      timeZone: z.string().default(process.env.TZ || 'UTC'),
+      timeZone: z.string(),
       teamIds: z.array(z.string()),
     })
     .passthrough(),
