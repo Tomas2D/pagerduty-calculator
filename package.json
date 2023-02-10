@@ -1,6 +1,6 @@
 {
   "name": "pagerduty-calculator",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "",
   "type": "module",
   "main": "./dist/pagerduty-calculator.cjs",
