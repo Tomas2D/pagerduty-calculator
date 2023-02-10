@@ -15,10 +15,6 @@
     "type": "git",
     "url": "git+https://github.com/Tomas2D/pagerduty-calculator.git"
   },
-  "engines": {
-    "node": "^18.12.1",
-    "npm": "^8.19.2"
-  },
   "bugs": {
     "url": "https://github.com/Tomas2D/pagerduty-calculator/issues"
   },
