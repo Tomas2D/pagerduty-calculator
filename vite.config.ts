@@ -3,9 +3,12 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
+import inject from "@rollup/plugin-inject";
 
 export default defineConfig({
-  plugins: [tsconfigPaths()],
+  plugins: [tsconfigPaths(), inject({
+    XMLHttpRequest: ['xhr2', '*']
+  })],
   server: {
     open: true,
     port: 3000,
