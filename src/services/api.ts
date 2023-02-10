@@ -1,6 +1,5 @@
 import { APIOptions, APIResponseItem } from '@app/types'
 import { formatDate } from '@app/helpers/date'
-import 'cross-fetch/polyfill'
 
 export async function fetchPagerDuty(params: APIOptions) {
   const url = new URL(params.domain)
