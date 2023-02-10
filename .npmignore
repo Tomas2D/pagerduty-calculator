@@ -1,0 +1,10 @@
+/src
+/test
+/scripts
+/.idea/
+/.eslintrc.cjs
+/.github
+/tsconfig.node.json
+/tsconfig.json
+/vite.config.ts
+.nvmrc
