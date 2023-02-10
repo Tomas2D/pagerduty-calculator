@@ -2,6 +2,7 @@ import { Options } from '@app/types'
 import { describe, expect, it, vi } from 'vitest'
 import { getStats } from '@app/core'
 import { sum } from 'ramda'
+import * as polyfill from './polyfill'
 
 const Config: Options = {
   nicknames: {
@@ -27,9 +28,9 @@ const Config: Options = {
 
 describe('Core module', () => {
   it('shell retrieve results', async () => {
-    vi.spyOn(global, 'fetch').mockImplementationOnce(
+    vi.spyOn(polyfill, 'fetch').mockImplementationOnce(
       async () =>
-        new Response(
+        new polyfill.Response(
           JSON.stringify({
             'schedules': [
               {

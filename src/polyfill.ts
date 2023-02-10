@@ -1,4 +1,4 @@
 import XMLHttpRequest from 'xhr2'
-import fetch from 'cross-fetch'
+import fetch, { Response } from 'cross-fetch'
 
-export { XMLHttpRequest, fetch }
+export { XMLHttpRequest, fetch, Response }
