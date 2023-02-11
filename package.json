@@ -1,6 +1,6 @@
 {
   "name": "pagerduty-calculator",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0-alpha.7",
   "description": "",
   "type": "module",
   "main": "./dist/pagerduty-calculator.cjs",
@@ -26,6 +26,7 @@
     "lint": "eslint src/**/* && prettier --check src/**/*",
     "lint:fix": "eslint src/**/* --fix && prettier --write src/**/*",
     "changelog": "npx gitmoji-changelog",
+    "version": "npm run changelog && code --wait CHANGELOG.md && git add README.md CHANGELOG.md",
     "prepublishOnly": "npm run build"
   },
   "author": "Tomáš Dvořák <toomas2d@gmail.com>",
@@ -43,12 +44,12 @@
     "eslint": "^8.33.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "gitmoji-changelog": "^2.3.0",
     "prettier": "^2.8.3",
     "typescript": "^4.9.5",
     "vite": "^4.0.4",
     "vite-tsconfig-paths": "^4.0.5",
     "vitest": "^0.28.4",
-    "@rollup/plugin-inject": "^5.0.3"
+    "@rollup/plugin-inject": "^5.0.3",
+    "patch-package": "^6.5.1"
   }
 }
